@@ -10,8 +10,8 @@
 fx:controller="com.proyecto.inventarios.controladores.UsuarioController">
 
    <children>
-      <TextField fx:id="txtInputUsuario" layoutX="84.0" layoutY="253.0" prefHeight="26.0" prefWidth="226.0" />
-      <TextField fx:id="txtInputPassword" layoutX="84.0" layoutY="173.0" prefHeight="26.0" prefWidth="226.0" />
+      <TextField fx:id="txtInputPassword" layoutX="84.0" layoutY="253.0" prefHeight="26.0" prefWidth="226.0" />
+      <TextField fx:id="txtInputUsuario" layoutX="84.0" layoutY="173.0" prefHeight="26.0" prefWidth="226.0" />
       <Label layoutX="84.0" layoutY="149.0" text="Nombre usuario" />
       <Label layoutX="84.0" layoutY="235.0" text="Contraseña" />
       <Button fx:id="btnCrearUsuario" onAction="#eCrearUsuario" layoutX="84.0" layoutY="310.0" mnemonicParsing="false" text="Crear usuario"/>

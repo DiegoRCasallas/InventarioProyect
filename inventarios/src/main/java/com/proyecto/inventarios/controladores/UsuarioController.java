@@ -1,6 +1,8 @@
 package com.proyecto.inventarios.controladores;
 
 import com.proyecto.inventarios.dao.UsuarioDao;
+import com.proyecto.inventarios.modelos.Usuario;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -26,7 +28,11 @@ public class UsuarioController {
         String name=txtInputUsuario.getText();
         String pass= txtInputPassword.getText();
         dao.crearNuevoUsuario(name,pass);
-        tArea.setText(dao.getListaUsuarios().getFirst().getName()+".");
+        tArea.setText(dao.getListaUsuarios().getLast().getName()+".");
+        System.out.println("Lista de usuarios:");
+        for (Usuario user : dao.getListaUsuarios()) {
+            System.out.println(user.getName());
+        }
 
 
 
