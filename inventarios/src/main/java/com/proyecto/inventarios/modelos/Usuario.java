@@ -1,9 +1,14 @@
 package com.proyecto.inventarios.modelos;
 
 public class Usuario {
-    String name;
-    String password;
+    private String name;
+    private String password;
 
     public Usuario(String name, String password) {
     }
+
+    public String getName() {
+        return name;
+    }
+
 }

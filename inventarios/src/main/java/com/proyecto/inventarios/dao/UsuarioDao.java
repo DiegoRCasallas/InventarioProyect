@@ -9,12 +9,10 @@ public class UsuarioDao {
     public void crearNuevoUsuario(String name, String password) {
        Usuario usuario = new Usuario(name, password);
         listaUsuarios.add(usuario);
-    }
-
-    public void agregarUsuario(Usuario usuario) {
-        listaUsuarios.add(usuario);
+        System.out.println(usuario.getName());
     }
     public ArrayList<Usuario> getListaUsuarios() {
         return listaUsuarios;
     }
+
 }
