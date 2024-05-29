@@ -77,4 +77,8 @@ public class ProveedorDao {
             System.out.println(e.getMessage());
         }
     }
+    
+    public List<Proveedor> mostrartodos(){
+        return listaproveedores;
+    }
 }
