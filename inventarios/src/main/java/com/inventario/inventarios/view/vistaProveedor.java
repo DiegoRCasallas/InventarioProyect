@@ -56,13 +56,10 @@ public class vistaProveedor extends javax.swing.JFrame {
         jLabel4.setText("telefono");
 
         idProveedor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        idProveedor.setText("...");
 
         nombreProveedor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        nombreProveedor.setText("...");
 
         telefonoProveedor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        telefonoProveedor.setText("...");
 
         crearProveedor.setText("crear");
 
