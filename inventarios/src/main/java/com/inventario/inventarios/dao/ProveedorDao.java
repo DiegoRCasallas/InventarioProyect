@@ -46,19 +46,6 @@ public class ProveedorDao {
         return true;
     }
     
-    public Proveedor buscar(int id){
-        for (Proveedor proveedor: listaproveedores){
-            if(id==proveedor.getId())
-                return proveedor;
-        }
-        return null;
-    }
-    
-    public void cambiar(int index, Proveedor proveedor ){
-        listaproveedores.set(index, proveedor);
-        guardar();
-    }
-    
     public int Index(Proveedor proveedor){
         return listaproveedores.indexOf(proveedor);
     }

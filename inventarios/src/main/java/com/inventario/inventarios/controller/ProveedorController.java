@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,8 +28,6 @@ public class ProveedorController implements ActionListener{
         this.vista=vista;
         this.modelo=new ProveedorDao();
         this.vista.crearProveedor.addActionListener(this);
-        this.vista.cambiarProveedor.addActionListener(this);
-        this.vista.buscarProveedor.addActionListener(this);
         this.vista.borrarProveedor.addActionListener(this);
         this.vista.mostrarpasajeros.addActionListener(this);
         this.modeloP=(DefaultTableModel) this.vista.tablaproveedores.getModel();
@@ -45,29 +44,7 @@ public class ProveedorController implements ActionListener{
             
             if(modelo.crear(proveedor)){
                 //joptionpane
-            }
-        }
-        if (e.getSource().equals(this.vista.buscarProveedor)){
-            int id=Integer.valueOf(this.vista.idProveedor.getText());
-            proveedor=modelo.buscar(id);
-            
-            if (proveedor==null){
-                //joptionpane
-            }else{
-                vista.nombreProveedor.setText(proveedor.getNombre());
-                vista.telefonoProveedor.setText(String.valueOf(proveedor.getTelefono()));
-            }
-        }
-        if(e.getSource().equals(this.vista.cambiarProveedor)){
-            int index=modelo.Index(proveedor);
-            if(index==-1){
-                
-            }else{
-                proveedor=new Proveedor();
-                proveedor.setId(Integer.valueOf(this.vista.idProveedor.getText()));
-                proveedor.setNombre(this.vista.nombreProveedor.getText());
-                proveedor.setTelefono(Integer.valueOf(this.vista.telefonoProveedor.getText()));
-                modelo.cambiar(index, proveedor);
+                JOptionPane.showMessageDialog(null, "NUEVO PROVEEDOR CREADO");
             }
         }
         if(e.getSource().equals(this.vista.mostrarpasajeros)){
