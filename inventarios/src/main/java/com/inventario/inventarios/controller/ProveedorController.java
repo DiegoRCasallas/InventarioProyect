@@ -47,6 +47,29 @@ public class ProveedorController implements ActionListener{
                 JOptionPane.showMessageDialog(null, "NUEVO PROVEEDOR CREADO");
             }
         }
+        
+        if (e.getSource().equals(this.vista.borrarProveedor)) {
+            int id = Integer.parseInt(this.vista.idProveedor.getText());
+            int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro de que desea borrar el proveedor con ID " + id + "?", "Confirmación", JOptionPane.YES_NO_OPTION);
+
+            if (respuesta == JOptionPane.YES_OPTION) {
+                Proveedor proveedorBorrar = null;
+                for (Proveedor p : modelo.mostrartodos()) {
+                    if (p.getId() == id) {
+                        proveedorBorrar = p;
+                        break;
+                    }
+                }
+
+                if (proveedorBorrar != null) {
+                    modelo.borrar(proveedorBorrar);
+                    JOptionPane.showMessageDialog(null, "Proveedor borrado con éxito");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Proveedor con ID " + id + " no encontrado");
+                }
+            }
+        }
+        
         if(e.getSource().equals(this.vista.mostrarpasajeros)){
             List<Proveedor> listaP= modelo.mostrartodos();
             int filas=modeloP.getRowCount();
@@ -59,7 +82,6 @@ public class ProveedorController implements ActionListener{
                 Object[]array={proveedor.getId(),proveedor.getNombre(),proveedor.getTelefono()};
                 modeloP.addRow(array);
             }
-        }
+         }
     }
-    
 }

@@ -46,10 +46,6 @@ public class ProveedorDao {
         return true;
     }
     
-    public int Index(Proveedor proveedor){
-        return listaproveedores.indexOf(proveedor);
-    }
-    
     public void borrar(Proveedor proveedor){
         listaproveedores.remove(proveedor);
         guardar();
