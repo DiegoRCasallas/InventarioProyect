@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.inventario.inventarios.model.Cliente;
-import com.inventario.inventarios.model.Cliente;
+
 
 public class ClienteDao {
     private List<Cliente> listaClientes;
@@ -42,7 +42,7 @@ public class ClienteDao {
     
     private void guardar() {
         try{
-            this.salida=new ObjectOutputStream(new FileOutputStream("Cliente.dat"));
+            this.salida=new ObjectOutputStream(new FileOutputStream("cliente.dat"));
             this.salida.writeObject(listaClientes);
             this.salida.close();
         }catch (Exception e){
