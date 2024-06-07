@@ -31,15 +31,14 @@ public class ClienteController implements ActionListener {
 
         if (e.getSource().equals(this.vista.btnCrearCliente)) {
             cliente = new Cliente();
+            //Esto es para hacer un id automatico en cada cliente que se crea, lineas 35 a 39
             if(clienteDao.mostrarTodos().size()<1){
                 cliente.setId(1);
             }else{
                 cliente.setId(clienteDao.mostrarTodos().getLast().getId() + 1);
             }
-            
             cliente.setNombre(this.vista.txtNombreCrearCliente.getText());
             cliente.setTelefono(this.vista.txtTelefonoCrearCliente.getText());
-
             if (clienteDao.crear(cliente)) {
                 JOptionPane.showMessageDialog(null, "UN NUEVO CLIENTE 🍌 FUE CREADO");
             }
