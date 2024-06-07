@@ -34,8 +34,6 @@ public class vistaProveedor extends javax.swing.JFrame {
         nombreProveedor = new javax.swing.JTextField();
         telefonoProveedor = new javax.swing.JTextField();
         crearProveedor = new javax.swing.JButton();
-        buscarProveedor = new javax.swing.JButton();
-        cambiarProveedor = new javax.swing.JButton();
         borrarProveedor = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaproveedores = new javax.swing.JTable();
@@ -62,10 +60,6 @@ public class vistaProveedor extends javax.swing.JFrame {
         telefonoProveedor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         crearProveedor.setText("crear");
-
-        buscarProveedor.setText("buscar");
-
-        cambiarProveedor.setText("cambiar");
 
         borrarProveedor.setText("borrar");
 
@@ -108,8 +102,6 @@ public class vistaProveedor extends javax.swing.JFrame {
                     .addComponent(telefonoProveedor))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(cambiarProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buscarProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(crearProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
                     .addComponent(borrarProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
                     .addComponent(mostrarpasajeros, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -131,10 +123,13 @@ public class vistaProveedor extends javax.swing.JFrame {
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(idProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45)
-                                .addComponent(jLabel3)
-                                .addGap(31, 31, 31)
-                                .addComponent(nombreProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(nombreProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(borrarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(51, 51, 51)
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
@@ -142,15 +137,10 @@ public class vistaProveedor extends javax.swing.JFrame {
                                 .addGap(28, 28, 28)))
                         .addContainerGap(33, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(crearProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(buscarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(cambiarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(borrarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(mostrarpasajeros, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(crearProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(213, 213, 213)
+                        .addComponent(mostrarpasajeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(25, 25, 25))))
         );
 
@@ -194,8 +184,6 @@ public class vistaProveedor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton borrarProveedor;
-    public javax.swing.JButton buscarProveedor;
-    public javax.swing.JButton cambiarProveedor;
     public javax.swing.JButton crearProveedor;
     public javax.swing.JTextField idProveedor;
     private javax.swing.JLabel jLabel1;

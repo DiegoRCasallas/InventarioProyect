@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,8 +28,6 @@ public class ProveedorController implements ActionListener{
         this.vista=vista;
         this.modelo=new ProveedorDao();
         this.vista.crearProveedor.addActionListener(this);
-        this.vista.cambiarProveedor.addActionListener(this);
-        this.vista.buscarProveedor.addActionListener(this);
         this.vista.borrarProveedor.addActionListener(this);
         this.vista.mostrarpasajeros.addActionListener(this);
         this.modeloP=(DefaultTableModel) this.vista.tablaproveedores.getModel();
@@ -45,31 +44,32 @@ public class ProveedorController implements ActionListener{
             
             if(modelo.crear(proveedor)){
                 //joptionpane
+                JOptionPane.showMessageDialog(null, "NUEVO PROVEEDOR CREADO");
             }
         }
-        if (e.getSource().equals(this.vista.buscarProveedor)){
-            int id=Integer.valueOf(this.vista.idProveedor.getText());
-            proveedor=modelo.buscar(id);
-            
-            if (proveedor==null){
-                //joptionpane
-            }else{
-                vista.nombreProveedor.setText(proveedor.getNombre());
-                vista.telefonoProveedor.setText(String.valueOf(proveedor.getTelefono()));
+        
+        if (e.getSource().equals(this.vista.borrarProveedor)) {
+            int id = Integer.parseInt(this.vista.idProveedor.getText());
+            int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro de que desea borrar el proveedor con ID " + id + "?", "Confirmación", JOptionPane.YES_NO_OPTION);
+
+            if (respuesta == JOptionPane.YES_OPTION) {
+                Proveedor proveedorBorrar = null;
+                for (Proveedor p : modelo.mostrartodos()) {
+                    if (p.getId() == id) {
+                        proveedorBorrar = p;
+                        break;
+                    }
+                }
+
+                if (proveedorBorrar != null) {
+                    modelo.borrar(proveedorBorrar);
+                    JOptionPane.showMessageDialog(null, "Proveedor borrado con éxito");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Proveedor con ID " + id + " no encontrado");
+                }
             }
         }
-        if(e.getSource().equals(this.vista.cambiarProveedor)){
-            int index=modelo.Index(proveedor);
-            if(index==-1){
-                
-            }else{
-                proveedor=new Proveedor();
-                proveedor.setId(Integer.valueOf(this.vista.idProveedor.getText()));
-                proveedor.setNombre(this.vista.nombreProveedor.getText());
-                proveedor.setTelefono(Integer.valueOf(this.vista.telefonoProveedor.getText()));
-                modelo.cambiar(index, proveedor);
-            }
-        }
+        
         if(e.getSource().equals(this.vista.mostrarpasajeros)){
             List<Proveedor> listaP= modelo.mostrartodos();
             int filas=modeloP.getRowCount();
@@ -82,7 +82,6 @@ public class ProveedorController implements ActionListener{
                 Object[]array={proveedor.getId(),proveedor.getNombre(),proveedor.getTelefono()};
                 modeloP.addRow(array);
             }
-        }
+         }
     }
-    
 }

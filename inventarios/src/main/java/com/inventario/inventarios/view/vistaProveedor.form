@@ -36,8 +36,6 @@
               </Group>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="cambiarProveedor" alignment="0" max="32767" attributes="0"/>
-                  <Component id="buscarProveedor" alignment="0" max="32767" attributes="0"/>
                   <Component id="crearProveedor" alignment="1" pref="83" max="32767" attributes="0"/>
                   <Component id="borrarProveedor" pref="83" max="32767" attributes="0"/>
                   <Component id="mostrarpasajeros" alignment="0" max="32767" attributes="0"/>
@@ -56,16 +54,21 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="idProveedor" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="nombreProveedor" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="nombreProveedor" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="borrarProveedor" min="-2" pref="99" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -76,15 +79,10 @@
                       <EmptySpace pref="33" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="crearProveedor" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace min="48" pref="48" max="-2" attributes="0"/>
-                      <Component id="buscarProveedor" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Component id="cambiarProveedor" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace min="49" pref="49" max="-2" attributes="0"/>
-                      <Component id="borrarProveedor" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="mostrarpasajeros" min="-2" pref="48" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="crearProveedor" min="-2" pref="93" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
+                      <Component id="mostrarpasajeros" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -152,22 +150,6 @@
     <Component class="javax.swing.JButton" name="crearProveedor">
       <Properties>
         <Property name="text" type="java.lang.String" value="crear"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JButton" name="buscarProveedor">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="buscar"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JButton" name="cambiarProveedor">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="cambiar"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
