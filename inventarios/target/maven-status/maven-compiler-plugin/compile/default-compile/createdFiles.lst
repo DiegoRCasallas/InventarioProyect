@@ -1,11 +1,11 @@
 com\inventario\inventarios\view\vistaProveedor$2.class
 com\inventario\inventarios\controller\VentaController.class
-com\inventario\inventarios\dao\ProveedorDao.class
-com\inventario\inventarios\view\vistaProveedor$1.class
 com\inventario\inventarios\controller\ProveedorController.class
 com\inventario\inventarios\view\vistaVenta$1.class
 com\inventario\inventarios\dao\VentaDao.class
 com\inventario\inventarios\model\Venta.class
 com\inventario\inventarios\view\vistaVenta.class
-com\inventario\inventarios\model\Proveedor.class
 com\inventario\inventarios\view\vistaProveedor.class
+com\inventario\inventarios\dao\ProveedorDao.class
+com\inventario\inventarios\view\vistaProveedor$1.class
+com\inventario\inventarios\model\Proveedor.class

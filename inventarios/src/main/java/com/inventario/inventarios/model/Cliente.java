@@ -1,6 +1,8 @@
 package com.inventario.inventarios.model;
 
-public class Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable{
     private int id;
     private String nombre;
     private String telefono;
