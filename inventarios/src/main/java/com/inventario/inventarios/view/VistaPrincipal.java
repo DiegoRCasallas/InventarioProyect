@@ -144,7 +144,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnMenuCliente;
-    private javax.swing.JButton btnMenuCompra;
+    public javax.swing.JButton btnMenuCompra;
     public javax.swing.JButton btnMenuProductos;
     public javax.swing.JButton btnMenuProveedor;
     public javax.swing.JButton btnMenuVenta;

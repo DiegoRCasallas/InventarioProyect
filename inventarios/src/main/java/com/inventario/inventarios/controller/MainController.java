@@ -33,7 +33,6 @@ public class MainController implements ActionListener {
         if (e.getSource().equals(this.vista.btnMenuProductos)) {
             // Aqui se pone el controlador de cada vista, con su respectiva vista
         }
-
         if (e.getSource().equals(this.vista.btnMenuVenta)) {
 
         }
