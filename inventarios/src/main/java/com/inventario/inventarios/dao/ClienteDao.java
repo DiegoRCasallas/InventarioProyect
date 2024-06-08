@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.inventario.inventarios.model.Cliente;
+import com.inventario.inventarios.model.Proveedor;
 
 
 public class ClienteDao {
@@ -22,6 +23,7 @@ public class ClienteDao {
         
         File file=new File(archivo);
         
+       
         if(file.isFile()){
             try{
                 this.entrada=new ObjectInputStream(new FileInputStream("clientes.dat"));
@@ -34,23 +36,29 @@ public class ClienteDao {
         }
     }
     
-    public boolean crear(Cliente Cliente){
-        listaClientes.add(Cliente);
+    public boolean crear(Cliente cliente){
+        listaClientes.add(cliente);
         guardar();
         return true;
     }
     
     private void guardar() {
         try{
-            this.salida=new ObjectOutputStream(new FileOutputStream("cliente.dat"));
+            this.salida=new ObjectOutputStream(new FileOutputStream("clientes.dat"));
             this.salida.writeObject(listaClientes);
             this.salida.close();
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
     }
+
+    public void borrar(Cliente cliente){
+        listaClientes.remove(cliente);
+        guardar();
+    }
+
     
-    public List<Cliente> mostrartodos(){
+    public List<Cliente> mostrarTodos(){
         return listaClientes;
     }
 }

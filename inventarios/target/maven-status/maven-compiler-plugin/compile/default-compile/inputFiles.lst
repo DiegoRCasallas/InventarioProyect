@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Camilo\Documents\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\controller\MainController.java
 C:\Users\Camilo\Documents\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\view\VistaCliente.java
 C:\Users\Camilo\Documents\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\Inventarios.java
@@ -13,3 +14,20 @@ C:\Users\Camilo\Documents\InventarioProyect\inventarios\src\main\java\com\invent
 C:\Users\Camilo\Documents\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\view\VistaPrincipal.java
 C:\Users\Camilo\Documents\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\controller\ClienteController.java
 C:\Users\Camilo\Documents\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\controller\ProveedorController.java
+=======
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\Inventarios.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\model\Cliente.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\controller\ProveedorController.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\view\VistaCliente.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\model\Proveedor.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\model\Venta.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\dao\ProveedorDao.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\dao\VentaDao.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\view\vistaProveedor.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\controller\VentaController.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\controller\MainController.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\view\vistaVenta.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\controller\ClienteController.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\view\VistaPrincipal.java
+C:\Users\maste\OneDrive\Desktop\SergioArboleda\Semestre2024-1\Fundamentos_diseño_software\InventarioProyect\inventarios\src\main\java\com\inventario\inventarios\dao\ClienteDao.java
+>>>>>>> 5dd4eac8527786fb208c606e18d043d13ef56928

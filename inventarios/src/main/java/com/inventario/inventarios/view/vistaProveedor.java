@@ -39,7 +39,7 @@ public class vistaProveedor extends javax.swing.JFrame {
         tablaproveedores = new javax.swing.JTable();
         mostrarpasajeros = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("proveedor");
