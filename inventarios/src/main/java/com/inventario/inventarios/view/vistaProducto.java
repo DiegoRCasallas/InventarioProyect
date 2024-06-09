@@ -8,12 +8,12 @@ package com.inventario.inventarios.view;
  *
  * @author Labing-PC
  */
-public class vistaCompra extends javax.swing.JFrame {
+public class vistaProducto extends javax.swing.JFrame {
 
     /**
      * Creates new form vistaCompra
      */
-    public vistaCompra() {
+    public vistaProducto() {
         initComponents();
     }
 
@@ -27,360 +27,313 @@ public class vistaCompra extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        textIdProvedorCompra = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        textNombreProvedorCompra = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        txtFechaDeCompra = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        textIdCompra = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        nombreProductoCompra = new javax.swing.JTextField();
-        btonBuscarClienteCompra = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        btonBuscarProductoCompra = new javax.swing.JButton();
-        textCodigoCompra = new javax.swing.JTextField();
+        txtNombreProducto = new javax.swing.JTextField();
+        btonBuscarProducto = new javax.swing.JButton();
+        txtCodigoProducto = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtCategoriaProductoCompra = new javax.swing.JTextField();
+        txtCategoriaProducto = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txtDescripcionProductoCompra = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        txtDescripcionProducto = new javax.swing.JTextField();
+        btonBuscarTodoProducto = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        btonBuscarProductoCompra1 = new javax.swing.JButton();
-        txtCantidadCompra = new javax.swing.JTextField();
-        txtStockProductoCompra1 = new javax.swing.JTextField();
+        txtStockProducto = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaProducto = new javax.swing.JTable();
+        jLabel14 = new javax.swing.JLabel();
+        txtSubtotalProducto = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        txtIvaProducto = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        txtTotalProducto = new javax.swing.JTextField();
+        btonCrearProducto = new javax.swing.JButton();
+        btonModificarProducto = new javax.swing.JButton();
+        btonBorrarProducto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        jLabel1.setText("Compra");
-
-        jLabel2.setText("Id. Provedor");
-
-        textIdProvedorCompra.setForeground(new java.awt.Color(204, 204, 204));
-        textIdProvedorCompra.setText("No. de id");
-        textIdProvedorCompra.addActionListener(new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textIdProvedorCompraActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Nombre");
-
-        textNombreProvedorCompra.setForeground(new java.awt.Color(204, 204, 204));
-        textNombreProvedorCompra.setText("Nombre provedor");
-
-        jLabel4.setText("Fecha");
-
-        txtFechaDeCompra.setEditable(false);
-
-        jLabel5.setText("Factura");
-
-        textIdCompra.setEditable(false);
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        jLabel6.setText("Resgitro de compra");
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel1.setText("Producto");
 
         jLabel7.setText("Codigo del producto");
 
-        nombreProductoCompra.addActionListener(new java.awt.event.ActionListener() {
-            @Override
+        txtNombreProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreProductoCompraActionPerformed(evt);
+                txtNombreProductoActionPerformed(evt);
             }
         });
 
-        btonBuscarClienteCompra.setBackground(new java.awt.Color(204, 204, 204));
-        btonBuscarClienteCompra.setForeground(new java.awt.Color(0, 0, 0));
-        btonBuscarClienteCompra.setText("Buscar");
-        btonBuscarClienteCompra.setToolTipText("");
-        btonBuscarClienteCompra.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btonBuscarClienteCompraMouseClicked(evt);
-            }
-        });
-        btonBuscarClienteCompra.addActionListener(new java.awt.event.ActionListener() {
-            @Override
+        btonBuscarProducto.setBackground(new java.awt.Color(204, 204, 204));
+        btonBuscarProducto.setForeground(new java.awt.Color(0, 0, 0));
+        btonBuscarProducto.setText("Buscar");
+        btonBuscarProducto.setToolTipText("");
+
+        txtCodigoProducto.setForeground(new java.awt.Color(0, 0, 0));
+        txtCodigoProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btonBuscarClienteCompraActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setText("jLabel8");
-
-        btonBuscarProductoCompra.setBackground(new java.awt.Color(204, 204, 204));
-        btonBuscarProductoCompra.setForeground(new java.awt.Color(0, 0, 0));
-        btonBuscarProductoCompra.setText("Buscar");
-        btonBuscarProductoCompra.setToolTipText("");
-
-        textCodigoCompra.setForeground(new java.awt.Color(204, 204, 204));
-        textCodigoCompra.setText("Codigo");
-        textCodigoCompra.addActionListener(new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textCodigoCompraActionPerformed(evt);
+                txtCodigoProductoActionPerformed(evt);
             }
         });
 
         jLabel9.setText("Descirpción ");
 
-        txtCategoriaProductoCompra.addActionListener(new java.awt.event.ActionListener() {
-            @Override
+        txtCategoriaProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCategoriaProductoCompraActionPerformed(evt);
+                txtCategoriaProductoActionPerformed(evt);
             }
         });
 
         jLabel10.setText("Nombre ");
 
-        jButton4.setText("jButton4");
-
-        jButton5.setText("jButton5");
+        btonBuscarTodoProducto.setText("Buscar todos");
 
         jLabel11.setText("Categoria");
 
-        jLabel12.setText("Cantidad");
-
-        btonBuscarProductoCompra1.setBackground(new java.awt.Color(204, 204, 204));
-        btonBuscarProductoCompra1.setForeground(new java.awt.Color(0, 0, 0));
-        btonBuscarProductoCompra1.setText("Agregar");
-        btonBuscarProductoCompra1.setToolTipText("");
-
-        txtCantidadCompra.setForeground(new java.awt.Color(204, 204, 204));
-        txtCantidadCompra.addActionListener(new java.awt.event.ActionListener() {
-            @Override
+        txtStockProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCantidadCompraActionPerformed(evt);
-            }
-        });
-
-        txtStockProductoCompra1.addActionListener(new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStockProductoCompra1ActionPerformed(evt);
+                txtStockProductoActionPerformed(evt);
             }
         });
 
         jLabel13.setText("Stock");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaProducto.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Codigo Prod", "Nombre", "Stock", "Iva", "Total", "Categoria"
             }
-        ));
-        jScrollPane2.setViewportView(jTable2);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tablaProducto);
+
+        jLabel14.setText("Subtotal");
+
+        txtSubtotalProducto.setForeground(new java.awt.Color(204, 204, 204));
+        txtSubtotalProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSubtotalProductoActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("Iva");
+
+        txtIvaProducto.setForeground(new java.awt.Color(204, 204, 204));
+        txtIvaProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIvaProductoActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("Total");
+
+        txtTotalProducto.setForeground(new java.awt.Color(204, 204, 204));
+        txtTotalProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTotalProductoActionPerformed(evt);
+            }
+        });
+
+        btonCrearProducto.setText("Crear");
+        btonCrearProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btonCrearProductoActionPerformed(evt);
+            }
+        });
+
+        btonModificarProducto.setText("Modificar");
+        btonModificarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btonModificarProductoActionPerformed(evt);
+            }
+        });
+
+        btonBorrarProducto.setText("Borrar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 636, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(81, 81, 81)
-                                .addComponent(jButton4)
-                                .addGap(102, 102, 102)
-                                .addComponent(jButton5))
+                                .addGap(126, 126, 126)
+                                .addComponent(txtSubtotalProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel14)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(83, 83, 83)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textNombreProvedorCompra)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(textIdProvedorCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btonBuscarClienteCompra)))))
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtFechaDeCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(textIdCompra)))
-                        .addGap(44, 44, 44))
+                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(66, 66, 66)
+                                .addComponent(txtStockProducto))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btonCrearProducto)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel9)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtCodigoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(37, 37, 37)
+                                .addComponent(btonBuscarProducto))
+                            .addComponent(txtDescripcionProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btonModificarProducto)
+                                    .addComponent(txtIvaProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel2)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel7)
-                                                    .addComponent(jLabel9))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(txtCantidadCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btonBuscarProductoCompra1))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(textCodigoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(37, 37, 37)
-                                                        .addComponent(btonBuscarProductoCompra))
-                                                    .addComponent(txtDescripcionProductoCompra))))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(jLabel12)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtStockProductoCompra1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel8)
-                                                .addGap(29, 29, 29))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel10)
-                                                .addGap(18, 18, 18))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtCategoriaProductoCompra, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
-                                            .addComponent(nombreProductoCompra))))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtCategoriaProducto)
+                                    .addComponent(txtNombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel16)
+                                .addGap(33, 33, 33)
+                                .addComponent(txtTotalProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btonBorrarProducto)
+                        .addGap(54, 54, 54))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(233, 233, 233))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(272, 272, 272))))
+                        .addGap(289, 289, 289))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btonBuscarTodoProducto)
+                        .addGap(283, 283, 283))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtFechaDeCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(textIdCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(104, 104, 104))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(textIdProvedorCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btonBuscarClienteCompra)
-                            .addComponent(jLabel4))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(textNombreProvedorCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5))
-                            .addComponent(jLabel3))
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel6)
-                        .addGap(49, 49, 49)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel7)
-                                .addComponent(textCodigoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btonBuscarProductoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtCodigoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btonBuscarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(nombreProductoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtNombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel10)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCategoriaProductoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCategoriaProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9)
-                            .addComponent(txtDescripcionProductoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtDescripcionProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel11))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12)
-                            .addComponent(txtCantidadCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btonBuscarProductoCompra1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtStockProductoCompra1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13))))
-                .addGap(45, 45, 45)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(txtStockProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(txtSubtotalProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIvaProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)
+                    .addComponent(txtTotalProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btonCrearProducto)
+                    .addComponent(btonModificarProducto)
+                    .addComponent(btonBorrarProducto))
+                .addGap(46, 46, 46)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4)
-                            .addComponent(jButton5))
-                        .addGap(20, 20, 20))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(btonBuscarTodoProducto)
+                .addGap(18, 18, 18))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textIdProvedorCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textIdProvedorCompraActionPerformed
+    private void txtCodigoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textIdProvedorCompraActionPerformed
+    }//GEN-LAST:event_txtCodigoProductoActionPerformed
 
-    private void textCodigoCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCodigoCompraActionPerformed
+    private void txtCategoriaProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCategoriaProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textCodigoCompraActionPerformed
+    }//GEN-LAST:event_txtCategoriaProductoActionPerformed
 
-    private void txtCategoriaProductoCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCategoriaProductoCompraActionPerformed
+    private void txtNombreProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCategoriaProductoCompraActionPerformed
+    }//GEN-LAST:event_txtNombreProductoActionPerformed
 
-    private void btonBuscarClienteCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonBuscarClienteCompraActionPerformed
+    private void txtStockProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btonBuscarClienteCompraActionPerformed
+    }//GEN-LAST:event_txtStockProductoActionPerformed
 
-    private void btonBuscarClienteCompraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btonBuscarClienteCompraMouseClicked
+    private void txtSubtotalProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSubtotalProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btonBuscarClienteCompraMouseClicked
+    }//GEN-LAST:event_txtSubtotalProductoActionPerformed
 
-    private void nombreProductoCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreProductoCompraActionPerformed
+    private void txtIvaProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIvaProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nombreProductoCompraActionPerformed
+    }//GEN-LAST:event_txtIvaProductoActionPerformed
 
-    private void txtCantidadCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadCompraActionPerformed
+    private void txtTotalProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCantidadCompraActionPerformed
+    }//GEN-LAST:event_txtTotalProductoActionPerformed
 
-    private void txtStockProductoCompra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockProductoCompra1ActionPerformed
+    private void btonCrearProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonCrearProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtStockProductoCompra1ActionPerformed
+    }//GEN-LAST:event_btonCrearProductoActionPerformed
+
+    private void btonModificarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btonModificarProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btonModificarProductoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -399,54 +352,49 @@ public class vistaCompra extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vistaCompra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vistaCompra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vistaCompra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vistaCompra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vistaCompra().setVisible(true);
+                new vistaProducto().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btonBuscarClienteCompra;
-    public javax.swing.JButton btonBuscarProductoCompra;
-    public javax.swing.JButton btonBuscarProductoCompra1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btonBorrarProducto;
+    public javax.swing.JButton btonBuscarProducto;
+    public javax.swing.JButton btonBuscarTodoProducto;
+    public javax.swing.JButton btonCrearProducto;
+    public javax.swing.JButton btonModificarProducto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
-    public javax.swing.JTextField nombreProductoCompra;
-    public javax.swing.JTextField textCodigoCompra;
-    private javax.swing.JTextField textIdCompra;
-    public javax.swing.JTextField textIdProvedorCompra;
-    public javax.swing.JTextField textNombreProvedorCompra;
-    public javax.swing.JTextField txtCantidadCompra;
-    public javax.swing.JTextField txtCategoriaProductoCompra;
-    public javax.swing.JTextField txtDescripcionProductoCompra;
-    public javax.swing.JTextField txtFechaDeCompra;
-    public javax.swing.JTextField txtStockProductoCompra1;
+    public javax.swing.JTable tablaProducto;
+    public javax.swing.JTextField txtCategoriaProducto;
+    public javax.swing.JTextField txtCodigoProducto;
+    public javax.swing.JTextField txtDescripcionProducto;
+    public javax.swing.JTextField txtIvaProducto;
+    public javax.swing.JTextField txtNombreProducto;
+    public javax.swing.JTextField txtStockProducto;
+    public javax.swing.JTextField txtSubtotalProducto;
+    public javax.swing.JTextField txtTotalProducto;
     // End of variables declaration//GEN-END:variables
 }
