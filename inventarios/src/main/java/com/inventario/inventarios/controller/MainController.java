@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import com.inventario.inventarios.view.VistaCliente;
 import com.inventario.inventarios.view.VistaPrincipal;
+import com.inventario.inventarios.view.vistaProducto;
 import com.inventario.inventarios.view.vistaProveedor;
 
 public class MainController implements ActionListener {
@@ -24,14 +25,14 @@ public class MainController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource().equals(this.vista.btnMenuCliente)) {
+        /*if (e.getSource().equals(this.vista.btnMenuCliente)) {
             ClienteController cCliente = new ClienteController(new VistaCliente());
-        }
+        }*/
         if (e.getSource().equals(this.vista.btnMenuProveedor)) {
             ProveedorController cProveedor = new ProveedorController(new vistaProveedor());
         }
         if (e.getSource().equals(this.vista.btnMenuProductos)) {
-            // Aqui se pone el controlador de cada vista, con su respectiva vista
+            ProductoController cProducto = new ProductoController(new vistaProducto());
         }
         if (e.getSource().equals(this.vista.btnMenuVenta)) {
 
