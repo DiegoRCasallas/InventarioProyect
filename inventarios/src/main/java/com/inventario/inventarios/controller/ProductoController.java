@@ -70,6 +70,7 @@ public class ProductoController implements ActionListener {
     private void crearProducto() {
         try {
             Producto producto = new Producto();
+            producto.setCodigo(Integer.parseInt(this.vista.txtCodigoProducto.getText()));
             producto.setNombre(this.vista.txtNombreProducto.getText());
             producto.setDescripcion(this.vista.txtDescripcionProducto.getText());
             producto.setStock(Integer.parseInt(this.vista.txtStockProducto.getText()));
