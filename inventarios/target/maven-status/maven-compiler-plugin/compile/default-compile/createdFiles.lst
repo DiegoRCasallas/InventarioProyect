@@ -1,30 +1,23 @@
-com\inventario\inventarios\view\vistaProveedor$2.class
 com\inventario\inventarios\view\VistaCliente$1.class
 com\inventario\inventarios\controller\VentaController.class
-<<<<<<< HEAD
 com\inventario\inventarios\view\VistaPrincipal$1.class
 com\inventario\inventarios\controller\MainController.class
-=======
->>>>>>> 5dd4eac8527786fb208c606e18d043d13ef56928
 com\inventario\inventarios\controller\ProveedorController.class
 com\inventario\inventarios\view\VistaCliente.class
-com\inventario\inventarios\view\vistaVenta$1.class
+com\inventario\inventarios\view\VistaProveedor$1.class
 com\inventario\inventarios\dao\VentaDao.class
 com\inventario\inventarios\model\Venta.class
-com\inventario\inventarios\view\vistaVenta.class
-com\inventario\inventarios\view\vistaProveedor.class
-<<<<<<< HEAD
 com\inventario\inventarios\view\VistaPrincipal$2.class
 com\inventario\inventarios\dao\ProveedorDao.class
-com\inventario\inventarios\view\vistaProveedor$1.class
+com\inventario\inventarios\view\VistaProveedor$2.class
+com\inventario\inventarios\view\VistaVenta.class
 com\inventario\inventarios\model\Cliente.class
 com\inventario\inventarios\view\VistaCliente$2.class
 com\inventario\inventarios\view\VistaPrincipal.class
+com\inventario\inventarios\view\VistaVenta$1.class
 com\inventario\inventarios\model\Proveedor.class
+com\inventario\inventarios\view\VistaProveedor.class
 com\inventario\inventarios\controller\ClienteController.class
 com\inventario\inventarios\dao\ClienteDao.class
-=======
-com\inventario\inventarios\dao\ProveedorDao.class
-com\inventario\inventarios\view\vistaProveedor$1.class
-com\inventario\inventarios\model\Proveedor.class
->>>>>>> 5dd4eac8527786fb208c606e18d043d13ef56928
+com\inventario\inventarios\model\Detalle.class
+com\inventario\inventarios\model\Producto.class
