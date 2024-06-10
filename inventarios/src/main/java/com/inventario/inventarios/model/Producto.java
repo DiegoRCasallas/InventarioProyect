@@ -7,9 +7,7 @@ public class Producto implements Serializable {
     private String nombre;
     private String descripcion;
     private int stock;
-    private double subtotal;
-    private double iva;
-    private double total;
+    private int total;
 
     public int getCodigo() {
         return codigo;
@@ -43,27 +41,11 @@ public class Producto implements Serializable {
         this.stock = stock;
     }
 
-    public double getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
-    }
-
-    public double getIva() {
-        return iva;
-    }
-
-    public void setIva(double iva) {
-        this.iva = iva;
-    }
-
     public double getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(int total) {
         this.total = total;
     }
 

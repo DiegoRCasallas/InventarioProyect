@@ -50,6 +50,7 @@ public class ProductoController implements ActionListener {
                 this.vista.txtNombreProducto.setText(producto.getNombre());
                 this.vista.txtDescripcionProducto.setText(producto.getDescripcion());
                 this.vista.txtStockProducto.setText(String.valueOf(producto.getStock()));
+                this.vista.txtTotalProducto.setText(String.valueOf(producto.getTotal()));
 
             } else {
                 JOptionPane.showMessageDialog(null, "Producto no encontrado");
@@ -62,7 +63,7 @@ public class ProductoController implements ActionListener {
     private void mostrarTodosLosProductos() {
         limpiarTabla();
         for (Producto producto : productoDao.consultarTodos()) {
-            Object[] fila = {producto.getCodigo(), producto.getNombre(), producto.getDescripcion(), producto.getStock()};
+            Object[] fila = {producto.getCodigo(), producto.getNombre(), producto.getDescripcion(), producto.getStock(), producto.getTotal()};
             tablaModelo.addRow(fila);
         }
     }
@@ -78,6 +79,7 @@ public class ProductoController implements ActionListener {
             producto.setNombre(this.vista.txtNombreProducto.getText());
             producto.setDescripcion(this.vista.txtDescripcionProducto.getText());
             producto.setStock(Integer.parseInt(this.vista.txtStockProducto.getText()));
+            producto.setTotal(Integer.parseInt(this.vista.txtTotalProducto.getText()));
 
             if (productoDao.crear(producto)) {
                 JOptionPane.showMessageDialog(null, "Producto creado exitosamente");
@@ -105,6 +107,7 @@ public class ProductoController implements ActionListener {
                 productoExistente.setNombre(this.vista.txtNombreProducto.getText());
                 productoExistente.setDescripcion(this.vista.txtDescripcionProducto.getText());
                 productoExistente.setStock(Integer.parseInt(this.vista.txtStockProducto.getText()));
+                productoExistente.setTotal(Integer.parseInt(this.vista.txtTotalProducto.getText()));
 
                 if (productoDao.modificar(id, productoExistente)) {
                     JOptionPane.showMessageDialog(null, "Producto actualizado exitosamente");
@@ -116,7 +119,7 @@ public class ProductoController implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Producto no encontrado");
             }
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(null, "Ingrese un valor numérico para Stock", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Ingrese un valor numérico para los espacios requeridos", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
