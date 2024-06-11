@@ -1,6 +1,9 @@
+
+
 package com.inventario.inventarios.model;
 
 import java.io.Serializable;
+
 
 public class Producto implements Serializable {
     private int codigo;
@@ -49,5 +52,4 @@ public class Producto implements Serializable {
         this.total = total;
     }
 
-    
 }

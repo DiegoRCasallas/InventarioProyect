@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 import com.inventario.inventarios.view.VistaCliente;
 import com.inventario.inventarios.view.VistaPrincipal;
 import com.inventario.inventarios.view.vistaProducto;
-import com.inventario.inventarios.view.vistaProveedor;
+
+import com.inventario.inventarios.view.VistaProveedor;
 
 public class MainController implements ActionListener {
 
@@ -29,7 +30,7 @@ public class MainController implements ActionListener {
             ClienteController cCliente = new ClienteController(new VistaCliente());
         }*/
         if (e.getSource().equals(this.vista.btnMenuProveedor)) {
-            ProveedorController cProveedor = new ProveedorController(new vistaProveedor());
+            ProveedorController cProveedor = new ProveedorController(new VistaProveedor());
         }
         if (e.getSource().equals(this.vista.btnMenuProductos)) {
             ProductoController cProducto = new ProductoController(new vistaProducto());

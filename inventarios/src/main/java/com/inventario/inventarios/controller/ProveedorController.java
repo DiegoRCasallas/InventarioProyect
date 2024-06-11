@@ -7,7 +7,7 @@ package com.inventario.inventarios.controller;
 
 import com.inventario.inventarios.dao.ProveedorDao;
 import com.inventario.inventarios.model.Proveedor;
-import com.inventario.inventarios.view.vistaProveedor;
+import com.inventario.inventarios.view.VistaProveedor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -19,12 +19,12 @@ import javax.swing.JOptionPane;
  * @author Labing-PC
  */
 public class ProveedorController implements ActionListener{
-    private vistaProveedor vista;
+    private VistaProveedor vista;
     private ProveedorDao modelo;
     private Proveedor proveedor;
     private DefaultTableModel modeloP;
     
-    public ProveedorController(vistaProveedor vista){
+    public ProveedorController(VistaProveedor vista){
         this.vista=vista;
         this.modelo=new ProveedorDao();
         this.vista.crearProveedor.addActionListener(this);
