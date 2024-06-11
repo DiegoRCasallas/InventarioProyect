@@ -2,10 +2,10 @@ package com.inventario.inventarios.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import com.inventario.inventarios.view.VistaCliente;
 import com.inventario.inventarios.view.VistaPrincipal;
 import com.inventario.inventarios.view.vistaProducto;
+
 import com.inventario.inventarios.view.vistaProveedor;
 
 public class MainController implements ActionListener {
