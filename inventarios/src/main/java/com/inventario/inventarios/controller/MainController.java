@@ -25,9 +25,9 @@ public class MainController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        /*if (e.getSource().equals(this.vista.btnMenuCliente)) {
+        if (e.getSource().equals(this.vista.btnMenuCliente)) {
             ClienteController cCliente = new ClienteController(new VistaCliente());
-        }*/
+        }
         if (e.getSource().equals(this.vista.btnMenuProveedor)) {
             ProveedorController cProveedor = new ProveedorController(new vistaProveedor());
         }
