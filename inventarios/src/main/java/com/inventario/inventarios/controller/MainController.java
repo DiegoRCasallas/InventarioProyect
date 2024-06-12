@@ -8,6 +8,7 @@ import com.inventario.inventarios.view.VistaPrincipal;
 import com.inventario.inventarios.view.vistaCompra;
 import com.inventario.inventarios.view.vistaProducto;
 import com.inventario.inventarios.view.vistaProveedor;
+import com.inventario.inventarios.view.vistaVenta;
 
 
 public class MainController implements ActionListener {
@@ -38,6 +39,7 @@ public class MainController implements ActionListener {
             
         }
         if (e.getSource().equals(this.vista.btnMenuVenta)) {
+            VentaController cVenta= new VentaController(new vistaVenta());
 
         }
         if (e.getSource().equals(this.vista.btnMenuCompra)) {

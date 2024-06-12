@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.inventario.inventarios.model.Cliente;
-import com.inventario.inventarios.model.Proveedor;
 
 
 public class ClienteDao {
@@ -42,6 +41,15 @@ public class ClienteDao {
         return true;
     }
     
+    public Cliente buscar(int id) {
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getId() == id) {
+                return cliente;
+            }
+        }
+        return null;
+    }
+
     private void guardar() {
         try{
             this.salida=new ObjectOutputStream(new FileOutputStream("clientes.dat"));
