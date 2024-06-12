@@ -5,8 +5,10 @@ import java.awt.event.ActionListener;
 
 import com.inventario.inventarios.view.VistaCliente;
 import com.inventario.inventarios.view.VistaPrincipal;
+import com.inventario.inventarios.view.vistaCompra;
 import com.inventario.inventarios.view.vistaProducto;
 import com.inventario.inventarios.view.vistaProveedor;
+
 
 public class MainController implements ActionListener {
 
@@ -39,6 +41,7 @@ public class MainController implements ActionListener {
 
         }
         if (e.getSource().equals(this.vista.btnMenuCompra)) {
+            CompraController cCrotroller = new CompraController(new vistaCompra());
 
         }
 

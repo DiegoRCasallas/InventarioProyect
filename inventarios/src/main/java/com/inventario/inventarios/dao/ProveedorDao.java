@@ -4,7 +4,6 @@
  */
 package com.inventario.inventarios.dao;
 
-import com.inventario.inventarios.model.Proveedor;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,6 +11,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.inventario.inventarios.model.Proveedor;
 
 /**
  *
@@ -63,5 +64,14 @@ public class ProveedorDao {
     
     public List<Proveedor> mostrartodos(){
         return listaproveedores;
+    }
+
+    public Proveedor buscar(int codigo) {
+        for (Proveedor proveedor : listaproveedores) {
+            if (proveedor.getId() == codigo) {
+                return proveedor;
+            }
+        }
+        return null; 
     }
 }

@@ -8,6 +8,9 @@ public class Producto implements Serializable {
     private String descripcion;
     private int stock;
     private int total;
+    private double subtotalCompra;
+    private double ivaCompra;
+    private double totalCompra;
 
     public int getCodigo() {
         return codigo;
@@ -49,5 +52,28 @@ public class Producto implements Serializable {
         this.total = total;
     }
 
+    public double getSubtotalCompra() {
+        return subtotalCompra;
+    }
+
+    public void setSubtotalCompra(double subtotalCompra) {
+        this.subtotalCompra = subtotalCompra;
+    }
+
+    public double getIvaCompra() {
+        return ivaCompra;
+    }
+
+    public void setIvaCompra(double ivaCompra) {
+        this.ivaCompra = ivaCompra;
+    }
+
+    public double getTotalCompra() {
+        return totalCompra;
+    }
+
+    public void setTotalCompra(double totalCompra) {
+        this.totalCompra = totalCompra;
+    }
     
 }

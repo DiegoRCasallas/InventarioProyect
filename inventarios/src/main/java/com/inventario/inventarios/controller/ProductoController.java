@@ -26,12 +26,10 @@ public class ProductoController implements ActionListener {
         this.vista.btonModificarProducto.addActionListener(this);
         this.vista.btonBorrarProducto.addActionListener(this);
         this.tablaModelo = (DefaultTableModel) this.vista.tablaProducto.getModel();
-        
-        // Agregar WindowListener para manejar el evento de cierre de la ventana secundaria
         this.vista.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                vista.dispose();  // Cierra solo la ventana secundaria
+                vista.dispose();
             }
         });
 

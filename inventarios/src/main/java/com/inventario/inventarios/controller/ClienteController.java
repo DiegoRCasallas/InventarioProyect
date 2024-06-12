@@ -3,11 +3,12 @@ package com.inventario.inventarios.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+
 import com.inventario.inventarios.dao.ClienteDao;
 import com.inventario.inventarios.model.Cliente;
-import com.inventario.inventarios.model.Proveedor;
 import com.inventario.inventarios.view.VistaCliente;
 
 public class ClienteController implements ActionListener {
@@ -31,7 +32,6 @@ public class ClienteController implements ActionListener {
 
         if (e.getSource().equals(this.vista.btnCrearCliente)) {
             cliente = new Cliente();
-            //Esto es para hacer un id automatico en cada cliente que se crea, lineas 35 a 39
             if(clienteDao.mostrarTodos().size()<1){
                 cliente.setId(1);
             }else{
