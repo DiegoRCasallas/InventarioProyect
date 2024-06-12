@@ -2,6 +2,8 @@ package com.inventario.inventarios.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -24,6 +26,16 @@ public class ProductoController implements ActionListener {
         this.vista.btonModificarProducto.addActionListener(this);
         this.vista.btonBorrarProducto.addActionListener(this);
         this.tablaModelo = (DefaultTableModel) this.vista.tablaProducto.getModel();
+        
+        // Agregar WindowListener para manejar el evento de cierre de la ventana secundaria
+        this.vista.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                vista.dispose();  // Cierra solo la ventana secundaria
+            }
+        });
+
+        this.vista.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         this.vista.setVisible(true);
     }
 
@@ -42,7 +54,7 @@ public class ProductoController implements ActionListener {
         }
     }
 
-    private void buscarProductoPorId() {
+    public void buscarProductoPorId() {
         try {
             int id = Integer.parseInt(this.vista.txtCodigoProducto.getText());
             Producto producto = productoDao.buscar(id);
@@ -60,7 +72,7 @@ public class ProductoController implements ActionListener {
         }
     }
 
-    private void mostrarTodosLosProductos() {
+    public void mostrarTodosLosProductos() {
         limpiarTabla();
         for (Producto producto : productoDao.consultarTodos()) {
             Object[] fila = {producto.getCodigo(), producto.getNombre(), producto.getDescripcion(), producto.getStock(), producto.getTotal()};
@@ -68,7 +80,7 @@ public class ProductoController implements ActionListener {
         }
     }
 
-    private void crearProducto() {
+    public void crearProducto() {
         try {
             Producto producto = new Producto();
             if(productoDao.consultarTodos().size()<1){
@@ -92,14 +104,14 @@ public class ProductoController implements ActionListener {
         }
     }
 
-    private void limpiarTabla() {
+    public void limpiarTabla() {
         int filas = tablaModelo.getRowCount();
         for (int i = filas - 1; i >= 0; i--) {
             tablaModelo.removeRow(i);
         }
     }
 
-    private void modificarProducto() {
+    public void modificarProducto() {
         try {
             int id = Integer.parseInt(this.vista.txtCodigoProducto.getText());
             Producto productoExistente = productoDao.buscar(id);
@@ -123,7 +135,7 @@ public class ProductoController implements ActionListener {
         }
     }
 
-    private void borrarProducto() {
+    public void borrarProducto() {
         try {
             int id = Integer.parseInt(this.vista.txtCodigoProducto.getText());
             int respuesta = JOptionPane.showConfirmDialog(null, "¿Confirma borrar el producto con ID " + id + "?", "Confirmación", JOptionPane.YES_NO_OPTION);
