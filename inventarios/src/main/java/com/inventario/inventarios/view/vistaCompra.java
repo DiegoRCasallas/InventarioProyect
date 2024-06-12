@@ -136,13 +136,14 @@ public class vistaCompra extends javax.swing.JFrame {
         btonAgregarCompra.setText("Agregar");
         btonAgregarCompra.setToolTipText("");
 
-        txtCantidadCompra.setForeground(new java.awt.Color(204, 204, 204));
+        txtCantidadCompra.setForeground(new java.awt.Color(0, 0, 0));
         txtCantidadCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCantidadCompraActionPerformed(evt);
             }
         });
 
+        txtStockProductoCompra.setForeground(new java.awt.Color(0, 0, 0));
         txtStockProductoCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStockProductoCompraActionPerformed(evt);
@@ -153,33 +154,33 @@ public class vistaCompra extends javax.swing.JFrame {
 
         tablaCompra.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Factura", "Proveedor", "Codigo Prod", "Nombre", "Stock", "Iva", "Total"
+                "Id Producto", "Producto", "Descripción", "Stock", "Precio", "Provedor"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, true
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -187,10 +188,18 @@ public class vistaCompra extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(tablaCompra);
+        if (tablaCompra.getColumnModel().getColumnCount() > 0) {
+            tablaCompra.getColumnModel().getColumn(0).setResizable(false);
+            tablaCompra.getColumnModel().getColumn(1).setResizable(false);
+            tablaCompra.getColumnModel().getColumn(2).setResizable(false);
+            tablaCompra.getColumnModel().getColumn(3).setResizable(false);
+            tablaCompra.getColumnModel().getColumn(4).setResizable(false);
+            tablaCompra.getColumnModel().getColumn(5).setResizable(false);
+        }
 
         jLabel14.setText("Subtotal");
 
-        txtSubtotalCompra.setForeground(new java.awt.Color(204, 204, 204));
+        txtSubtotalCompra.setForeground(new java.awt.Color(0, 0, 0));
         txtSubtotalCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSubtotalCompraActionPerformed(evt);
@@ -199,7 +208,7 @@ public class vistaCompra extends javax.swing.JFrame {
 
         jLabel15.setText("Iva");
 
-        txtIvaCompra.setForeground(new java.awt.Color(204, 204, 204));
+        txtIvaCompra.setForeground(new java.awt.Color(0, 0, 0));
         txtIvaCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIvaCompraActionPerformed(evt);
@@ -208,7 +217,7 @@ public class vistaCompra extends javax.swing.JFrame {
 
         jLabel16.setText("Total");
 
-        txtTotalCompra.setForeground(new java.awt.Color(204, 204, 204));
+        txtTotalCompra.setForeground(new java.awt.Color(0, 0, 0));
         txtTotalCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTotalCompraActionPerformed(evt);
@@ -326,7 +335,7 @@ public class vistaCompra extends javax.swing.JFrame {
                     .addComponent(txtCodigoProductoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btonBuscarProductoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtNombreProductoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addGap(25, 25, 25)
