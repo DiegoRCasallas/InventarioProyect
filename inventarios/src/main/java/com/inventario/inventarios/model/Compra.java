@@ -3,11 +3,22 @@ package com.inventario.inventarios.model;
 import java.io.Serializable;
 
 public class Compra implements Serializable {
+    private Producto producto;
+    private String proveedorF;
     private double subtotal;
     private double iva; 
     private double total;
     private int cantidad;
     private int factura;
+
+    public Compra(Producto producto, String proveedorF, int cantidad, double subtotal, double iva, double total) {
+        this.producto = producto;
+        this.proveedorF = proveedorF;
+        this.cantidad = cantidad;
+        this.subtotal = subtotal;
+        this.iva = iva;
+        this.total = total;
+    }
 
     public double getSubtotal() {
         return subtotal;

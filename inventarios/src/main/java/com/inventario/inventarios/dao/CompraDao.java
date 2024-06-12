@@ -15,6 +15,7 @@ public class CompraDao {
     private ObjectInputStream entrada;
     private ObjectOutputStream salida;
     private String archivo="compra.dat";
+    
 
     public CompraDao() {
         listaCompra=new ArrayList<>();
@@ -49,6 +50,7 @@ public class CompraDao {
         }
     }
  
+    
     public List<Compra> mostrarTodos(){
         return listaCompra;
     }

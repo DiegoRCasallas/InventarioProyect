@@ -70,7 +70,7 @@ public class vistaProducto extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setText("Descirpción ");
+        jLabel9.setText("Descripción ");
 
         jLabel10.setText("Nombre ");
 
