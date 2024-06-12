@@ -1,6 +1,7 @@
 com\inventario\inventarios\view\vistaProducto$8.class
 com\inventario\inventarios\view\VistaCliente$1.class
 com\inventario\inventarios\controller\VentaController.class
+com\inventario\inventarios\view\vistaVenta$4.class
 com\inventario\inventarios\dao\ProductoDao.class
 com\inventario\inventarios\view\vistaProducto$1.class
 com\inventario\inventarios\controller\ProveedorController.class
@@ -19,8 +20,10 @@ com\inventario\inventarios\view\vistaProveedor$1.class
 com\inventario\inventarios\view\VistaCliente$2.class
 com\inventario\inventarios\view\vistaCompra$1.class
 com\inventario\inventarios\view\VistaPrincipal.class
+com\inventario\inventarios\view\vistaVenta$5.class
 com\inventario\inventarios\view\vistaProducto$5.class
 com\inventario\inventarios\view\vistaCompra$10.class
+com\inventario\inventarios\view\vistaVenta$2.class
 com\inventario\inventarios\controller\ClienteController.class
 com\inventario\inventarios\dao\ClienteDao.class
 com\inventario\inventarios\view\vistaCompra$4.class
@@ -29,6 +32,7 @@ com\inventario\inventarios\controller\ProductoController.class
 com\inventario\inventarios\model\Producto.class
 com\inventario\inventarios\view\vistaInfomeCompra.class
 com\inventario\inventarios\view\vistaInfomeCompra$6.class
+com\inventario\inventarios\view\vistaInformeVenta$1.class
 com\inventario\inventarios\view\vistaCompra.class
 com\inventario\inventarios\view\vistaProveedor$2.class
 com\inventario\inventarios\view\VistaPrincipal$1.class
@@ -36,11 +40,13 @@ com\inventario\inventarios\view\vistaCompra$7.class
 com\inventario\inventarios\view\vistaInfomeCompra$1.class
 com\inventario\inventarios\controller\MainController.class
 com\inventario\inventarios\view\vistaProducto$3.class
+com\inventario\inventarios\view\vistaVenta$6.class
 com\inventario\inventarios\view\VistaCliente.class
 com\inventario\inventarios\view\vistaProducto$6.class
 com\inventario\inventarios\view\vistaVenta.class
 com\inventario\inventarios\view\vistaInfomeCompra$4.class
 com\inventario\inventarios\view\vistaCompra$3.class
+com\inventario\inventarios\view\vistaVenta$3.class
 com\inventario\inventarios\view\vistaCompra$12.class
 com\inventario\inventarios\view\vistaProveedor.class
 com\inventario\inventarios\view\vistaProducto.class
@@ -48,7 +54,9 @@ com\inventario\inventarios\view\VistaPrincipal$2.class
 com\inventario\inventarios\view\vistaInfomeCompra$5.class
 com\inventario\inventarios\view\vistaProducto$7.class
 com\inventario\inventarios\model\Cliente.class
+com\inventario\inventarios\view\vistaInformeVenta.class
 com\inventario\inventarios\view\vistaCompra$6.class
 com\inventario\inventarios\model\Proveedor.class
 com\inventario\inventarios\view\vistaCompra$11.class
 com\inventario\inventarios\view\vistaCompra$9.class
+com\inventario\inventarios\view\vistaVenta$7.class
